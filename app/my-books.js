@@ -105,9 +105,9 @@ export default function MyBooksScreen() {
       ) : savedBooks.length === 0 ? (
         <View style={styles.messageContainer}>
           <Ionicons name="book-outline" size={64} color="#ccc" />
-          <Text style={styles.emptyMessage}>Your collection is empty</Text>
+          <Text style={styles.emptyMessage}>Koleksi Anda kosong</Text>
           <Text style={styles.emptySubMessage}>
-            Save books from search results to build your collection
+          Simpan buku dari hasil pencarian untuk membangun koleksi Anda
           </Text>
         </View>
       ) : (
