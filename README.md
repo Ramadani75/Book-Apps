@@ -82,7 +82,7 @@ book-explorer-app/
 ├── utils/                  # Fungsi utilitas
 │   └── storage.js          # Helper untuk AsyncStorage
 ├── assets/                 # Gambar, font, dan file statis lainnya
-│   └── UI&UX/        # Cuplikan layar untuk README
+│   └── UI&UX/        # Design UI&UX
 └── app.json                # Konfigurasi Expo
 ```
 
