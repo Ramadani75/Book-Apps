@@ -87,11 +87,11 @@ export default function MyBooksScreen() {
     <SafeAreaView style={styles.container}>
       <Stack.Screen
         options={{
-          title: 'My Books',
+          title: 'Buku Saya',
           headerRight: () => (
             savedBooks.length > 0 ? (
               <TouchableOpacity onPress={confirmClearAll} style={styles.headerButton}>
-                <Text style={styles.clearText}>Clear All</Text>
+                <Text style={styles.clearText}>Hapus Semua</Text>
               </TouchableOpacity>
             ) : null
           ),

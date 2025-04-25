@@ -103,7 +103,7 @@ export default function BookDetailScreen() {
           </View>
 
           <View style={styles.section}>
-            <Text style={styles.sectionTitle}>About this book</Text>
+            <Text style={styles.sectionTitle}>Tentang Buku</Text>
             <Text style={styles.description}>{book.description}</Text>
           </View>
 
@@ -140,7 +140,7 @@ export default function BookDetailScreen() {
                   isSaved && styles.savedButtonText,
                 ]}
               >
-                {isSaved ? 'Saved' : 'Save for later'}
+                {isSaved ? 'Tersimpan' : 'Simpan untuk nanti'}
               </Text>
             </TouchableOpacity>
           </View>

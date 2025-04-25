@@ -16,7 +16,7 @@ export default function RootLayout() {
         <Stack.Screen name="index" options={{ title: 'Home' }} />
 
         {/* Jika ada halaman Search di app/search.js */}
-        <Stack.Screen name="search" options={{ title: 'Search Buku' }} />
+        <Stack.Screen name="search" options={{ title: 'Cari Buku' }} />
 
         {/* Halaman My Books di app/my-books.js */}
         <Stack.Screen name="my-books" options={{ title: 'My Books' }} />

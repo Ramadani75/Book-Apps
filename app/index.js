@@ -67,9 +67,9 @@ export default function HomeScreen() {
         ListHeaderComponent={
           <>
             <View style={styles.welcomeSection}>
-              <Text style={styles.welcomeTitle}>Discover new books</Text>
+              <Text style={styles.welcomeTitle}>Temukan Buku Baru</Text>
               <Text style={styles.welcomeSubtitle}>
-                Tap the search icon above to find your next read
+              Ketuk ikon pencarian di atas untuk menemukan bacaan Anda berikutnya
               </Text>
             </View>
 
@@ -78,7 +78,7 @@ export default function HomeScreen() {
               ? renderShimmer()
               : (
                 <BookList
-                  title="Trending Books"
+                  title="Buku yang Sedang Tren"
                   data={trendingBooks}
                   loading={false}
                   horizontal
@@ -91,7 +91,7 @@ export default function HomeScreen() {
               ? renderShimmer()
               : (
                 <BookList
-                  title="Popular Categories"
+                  title="Kategori Populer"
                   data={categories}
                   loading={false}
                   horizontal
