@@ -71,16 +71,7 @@ export default function HomeScreen() {
       <Stack.Screen
         options={{
           title: 'Book Explorer',
-          headerRight: () => (
-            <View style={styles.headerIcons}>
-              <TouchableOpacity onPress={goToSearch} style={styles.iconBtn}>
-                <Ionicons name="search-outline" size={24} color="#0066cc" />
-              </TouchableOpacity>
-              <TouchableOpacity onPress={goToMyBooks} style={styles.iconBtn}>
-                <Ionicons name="library-outline" size={24} color="#0066cc" />
-              </TouchableOpacity>
-            </View>
-          ),
+          
           headerLeft: null,
         }}
       />

@@ -1,32 +1,65 @@
-// app/_layout.js
 import { SafeAreaProvider } from 'react-native-safe-area-context';
-import { Stack } from 'expo-router';
+import { Tabs } from 'expo-router';
+import { Ionicons } from '@expo/vector-icons';
 
 export default function RootLayout() {
   return (
     <SafeAreaProvider>
-      <Stack
-        screenOptions={{
-          headerStyle: { backgroundColor: '#f5f5f5' },
-          headerTintColor: '#333',
-          headerTitleStyle: { fontWeight: 'bold' },
-        }}
+      <Tabs
+        screenOptions={({ route }) => ({
+          headerShown: true,
+          tabBarActiveTintColor: '#0066cc',
+          tabBarInactiveTintColor: '#888',
+          tabBarStyle: {
+            backgroundColor: '#fff',
+            borderTopColor: '#eee',
+            height: 60,
+            paddingBottom: 6,
+            paddingTop: 4,
+          },
+          tabBarIcon: ({ color, size }) => {
+            let iconName;
+
+            if (route.name === 'index') {
+              iconName = 'home-outline';
+            } else if (route.name === 'search') {
+              iconName = 'search-outline';
+            } else if (route.name === 'my-books') {
+              iconName = 'library-outline';
+            }
+
+            return <Ionicons name={iconName} size={size} color={color} />;
+          },
+        })}
       >
-        {/* HomeScreen di app/index.js */}
-        <Stack.Screen name="index" options={{ title: 'Home' }} />
-
-        {/* Jika ada halaman Search di app/search.js */}
-        <Stack.Screen name="search" options={{ title: 'Cari Buku' }} />
-
-        {/* Halaman My Books di app/my-books.js */}
-        <Stack.Screen name="my-books" options={{ title: 'My Books' }} />
-
-        {/* DetailBook di app/details/[id].js */}
-        <Stack.Screen
-          name="details/[id]"
-          options={{ title: 'Detail Buku' }}
+        <Tabs.Screen
+          name="index"
+          options={{
+            title: 'Beranda',
+          }}
         />
-      </Stack>
+        <Tabs.Screen
+          name="search"
+          options={{
+            title: 'Cari',
+          }}
+        />
+        <Tabs.Screen
+          name="my-books"
+          options={{
+            title: 'Buku Saya',
+          }}
+        />
+        <Tabs.Screen
+          name="details/[id]"
+          options={{
+            href: null,
+            tabBarStyle: { display: 'none' },
+            headerShown: true,
+            title: 'Detail Buku',
+          }}
+        />
+      </Tabs>
     </SafeAreaProvider>
   );
 }

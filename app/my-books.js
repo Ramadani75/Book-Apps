@@ -5,14 +5,19 @@ import { Stack } from 'expo-router';
 import { Ionicons } from '@expo/vector-icons';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import BookCard from '../components/BookCard';
+import { useCallback } from 'react';
+import { useFocusEffect } from '@react-navigation/native';
 
 export default function MyBooksScreen() {
   const [savedBooks, setSavedBooks] = useState([]);
   const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    loadSavedBooks();
-  }, []);
+  useFocusEffect(
+    useCallback(() => {
+      loadSavedBooks();
+    }, [])
+  );
+  
 
   const loadSavedBooks = async () => {
     try {
