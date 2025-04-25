@@ -19,23 +19,20 @@ Aplikasi mobile yang dibuat dengan React Native (Expo) yang memungkinkan penggun
 - AsyncStorage untuk penyimpanan data lokal
 - Expo Vector Icons untuk elemen UI
 
-## Cuplikan Layar
+## DESIGN UI&UX
 
 ### Layar Beranda
-![Home Screen](./assets/screenshots/home-screen.png)
+![Home Screen](./assets/UI&UX/home-screen.png)
 
 ### Layar Detail Buku
-![Book Details](./assets/screenshots/book-details-screen.png)
+![Book Details](./assets/UI&UX/book-details-screen.png)
 
 ### Layar Buku Saya
-![My Books](./assets/screenshots/my-books-screen.png)
+![My Books](./assets/UI&UX/my-books-screen.png)
 
-## Desain UI/UX
+### Layar Buku Saya
+![Search Books](./assets/UI&UX/seacrh-screen.png)
 
-Aplikasi ini mengikuti desain yang terinspirasi dari Google Books dengan tampilan yang bersih dan modern, berfokus pada keterbacaan dan kemudahan penggunaan.
-
-### Alur Desain
-![App Flow](./assets/screenshots/app-flow-diagram.png)
 
 ### Komponen Desain
 Aplikasi menggunakan skema warna dan tipografi yang konsisten di seluruh tampilan:
@@ -85,7 +82,7 @@ book-explorer-app/
 ├── utils/                  # Fungsi utilitas
 │   └── storage.js          # Helper untuk AsyncStorage
 ├── assets/                 # Gambar, font, dan file statis lainnya
-│   └── screenshots/        # Cuplikan layar untuk README
+│   └── UI&UX/        # Cuplikan layar untuk README
 └── app.json                # Konfigurasi Expo
 ```
 
